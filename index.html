@@ -13,13 +13,13 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="description" content="A Cloud native multi-package registry">
-  <meta property="og:title" content="Enseada &amp;middot; Enseada">
+  <meta property="og:title" content="Enseada">
   <meta property="og:url" content="/">
   <meta property="og:description" content="A Cloud native multi-package registry">
   <meta property="og:site_name" content="Enseada">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Enseada &amp;middot; Enseada" />
+  <meta name="twitter:title" content="Enseada" />
   <meta name="twitter:description" content="A Cloud native multi-package registry">
   <meta name="twitter:url" content="/" />
     <meta property="og:image" content="">
@@ -28,7 +28,7 @@
 
   <meta name="generator" content="Hugo 0.59.1" />
 
-  <title>Enseada &middot; Enseada</title>
+  <title>Enseada</title>
 
   <!-- Theme Styles -->
   <style>
@@ -471,6 +471,58 @@ html {
       <div class="col text-center">
         <h5>Enseada is currently under heavy development</h5>
         <p>Stay tuned for upcoming updates and new features!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="registries">
+  <div class="overlay container-fluid bg-light">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col text-center text-dark">
+        <h4>Multiple registries</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <h5>Enseada is built to host multiple package formats</h5>
+        <div style="font-size: 1.3rem;">
+          <a target="_blank" href="/about#supported-package-repositories" class="badge badge-pill badge-success">Maven</a>
+          <a target="_blank" href="/about#supported-package-repositories" class="badge badge-pill badge-warning">NPM</a>
+          <a target="_blank" href="/about#supported-package-repositories" class="badge badge-pill badge-info">Docker</a>
+          <a target="_blank" href="/about#supported-package-repositories" class="badge badge-pill badge-danger">RubyGems</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="distributed copy">
+  <div class="overlay container-fluid bg-light">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col text-center text-dark">
+        <h4>Built for the Cloud</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <h5>Enseada is built on distributed technologies to achieve high availability and easy horizontal scaling</h5>
+        <p>
+          Built on top of the <a target="_blank" href="https://www.erlang.org">Erlang</a> runtime
+          and <a target="_blank" href="https://couchdb.apache.org">CouchDB</a>, Enseada is natively distributed and fault-tolerant, reaching high 
+          degrees of reliability and security. The storage engine is compatible with many object storage providers to efficiently store your 
+          packages in the Cloud.
+        </p>
+      </div>
+    </div>
+    <div class="col text-center">
+        <h5>Container native</h5>
+        <p>
+          Enseada is designed to be run in containers, and plays nicely with orchestration tools such as Kubernetes and Swarm.<br />
+          Check out the <a target="_blank" href="https://hub.docker.com/r/enseada/enseada">official Docker image</a>.
+        </p>
       </div>
     </div>
   </div>
