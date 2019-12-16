@@ -14,15 +14,15 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="description" content="A Cloud native multi-package registry.
 Enseada is a modern, fast and scalable package registry, designed from the ground up to run in elastic, container-based environments and to be highly available and distributed.
-It leverages scalability by using natively distributed technologies
-The registry itself is written in Elixir, an Erlang compatible, functional and process-based programming language that is both fast and resource efficient.
+ It leverages scalability by using natively distributed technologies
+The registry itself is written in Go, a statically typed and extremely fast programming language very popular in Cloud native applications.
 CouchDB is used as the primary datastore, containing information about repositories, users and access control.">
   <meta property="og:title" content="About Enseada &amp;middot; Enseada">
   <meta property="og:url" content="/about/">
   <meta property="og:description" content="A Cloud native multi-package registry.
 Enseada is a modern, fast and scalable package registry, designed from the ground up to run in elastic, container-based environments and to be highly available and distributed.
-It leverages scalability by using natively distributed technologies
-The registry itself is written in Elixir, an Erlang compatible, functional and process-based programming language that is both fast and resource efficient.
+ It leverages scalability by using natively distributed technologies
+The registry itself is written in Go, a statically typed and extremely fast programming language very popular in Cloud native applications.
 CouchDB is used as the primary datastore, containing information about repositories, users and access control.">
   <meta property="og:site_name" content="Enseada">
   <meta property="og:type" content="website">
@@ -30,15 +30,15 @@ CouchDB is used as the primary datastore, containing information about repositor
   <meta name="twitter:title" content="About Enseada &amp;middot; Enseada" />
   <meta name="twitter:description" content="A Cloud native multi-package registry.
 Enseada is a modern, fast and scalable package registry, designed from the ground up to run in elastic, container-based environments and to be highly available and distributed.
-It leverages scalability by using natively distributed technologies
-The registry itself is written in Elixir, an Erlang compatible, functional and process-based programming language that is both fast and resource efficient.
+ It leverages scalability by using natively distributed technologies
+The registry itself is written in Go, a statically typed and extremely fast programming language very popular in Cloud native applications.
 CouchDB is used as the primary datastore, containing information about repositories, users and access control.">
   <meta name="twitter:url" content="/about/" />
         <meta property="og:image" content="">
         <meta name="twitter:image" content="">
   <meta name="author" content="Enseada">
 
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.60.1" />
 
   <title>About Enseada &middot; Enseada</title>
 
@@ -387,7 +387,7 @@ html {
   align-self: stretch !important; }
 </style>
 
-  <link href="/style.min.dfc76e0a4c03faab88f81d517d6efa6a235c422f57d1fa1a10e56eba3fe728ea.css" rel="stylesheet">
+  <link href="/style.min.a3636f61285a533daad479f35324a9957d578abc7b90e33f92123377123a455b.css" rel="stylesheet">
       <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
       <link rel="icon" sizes="16x16 32x32" type="image/x-icon" href="/favicon.ico">
       <link rel="icon" href="/favicon.png">
@@ -454,56 +454,41 @@ html {
     </div>
   </div>
 <div class="col-12 content px-0 text-body"><p>A Cloud native multi-package registry.</p>
-
 <p>Enseada is a modern, fast and scalable package registry, designed from the ground up
 to run in elastic, container-based environments and to be highly available and distributed.</p>
-
-<hr />
-
+<hr>
 <p>It leverages scalability by using natively distributed technologies</p>
-
-<p>The registry itself is written in <a href="https://elixir-lang.org">Elixir</a>, an <a href="https://www.erlang.org/">Erlang</a> compatible,
-functional and process-based programming language that is both fast and resource efficient.</p>
-
+<p>The registry itself is written in <a href="https://golang.org">Go</a>, a statically typed and extremely fast programming language very popular in Cloud native applications.</p>
 <p><a href="https://couchdb.apache.org/">CouchDB</a> is used as the primary datastore, containing information about
-repositories, users and access control. CouchDB is a web-native database written in Erlang and based on web technologies
-like HTTP and JSON.</p>
-
-<p>As far as storage is concerned, both local disks an object storage services are supported, altough
-the latter are strongly recommended for production deployments.</p>
-
+repositories, users and access control. CouchDB is a web-native database written in Erlang and based on web technologies like HTTP and JSON.</p>
+<p>As far as storage is concerned, both local disks an object storage services are supported altough the latter are strongly recommended for production deployments.</p>
+<h2 id="security-first">Security first</h2>
+<p>Enseada aims at providing a small, yet complete set of feature for managing software packages.
+Security is a priority concern, so an advanced policy engine provides the capabilities to define fine grained permissions over repositories and packages. From human users to automated service accounts, every access to the system is controlled, filtered and logged. A fully compliant <a href="https://auth0.com/docs/protocols/oauth2">OAuth 2</a> implementation allows integration with third party systems with ease.</p>
+<h2 id="management-api">Management API</h2>
+<p>A set of <a href="https://twitchtv.github.io/twirp">Twirp</a> APIs allows to programmatically interact with Enseada and its resources. Check the <a href="#">documentation</a> for more information.</p>
+<h2 id="management-ui">Management UI</h2>
+<p>The same set of functionalities exposed in the <a href="#management-api">API</a> is available as a built-in web GUI. Check the <a href="#">documentation</a> for more information.</p>
 <h2 id="supported-package-repositories">Supported package repositories</h2>
-
-<p>Enseada is a multi-package registry, meaning it can support a large number of package
-formats and registry APIs.</p>
-
+<p>Enseada is a multi-package registry, meaning it can support a large number of package formats and registry APIs.</p>
 <p>At the moment, the following formats are supported:</p>
-
 <ul>
 <li><a href="https://maven.apache.org/guides/introduction/introduction-to-repositories.html">Maven 2 / 3</a></li>
 <li><a href="https://github.com/npm/registry/blob/master/docs/REGISTRY-API.md">NPM</a> (planned, coming soon)</li>
 <li><a href="https://docs.docker.com/registry/spec/api/">Docker</a> (planned, coming soon)</li>
 <li><a href="https://rubygems.org">RubyGems</a> (planned, coming soon)</li>
 </ul>
-
 <h2 id="supported-storage-providers">Supported storage providers</h2>
-
-<p>Enseada uses the wonderful library <a href="https://github.com/stavro/arc">Waffle</a> to implement
-its storage layer, and is therefore compatible with any provider supported by Waffle.
+<p>Enseada abstracts the underlying storage provider with an agnostic engine based on <a href="https://github.com/chartmuseum/storage">ChartMuseum's library</a>
 See <a href="#configuration">Configuration</a> for how to setup the storage layer.</p>
-
 <p>At the moment, only these providers are supported:</p>
-
 <ul>
 <li>Local disk</li>
 <li>S3 compatible (AWS S3, Minio, DigitalOcean Spaces, Scaleway Object Storage, Ceph, etc)</li>
 <li>Google Cloud Storage</li>
 </ul>
-
 <p>Local disk is only supported in single-node mode. To support <a href="#cluster-mode">cluster mode</a> use an object storage provider.</p>
-
 <h2 id="cluster-mode">Cluster mode</h2>
-
 <p>Coming soon</p>
 </div>
         </article>
@@ -537,7 +522,6 @@ See <a href="#configuration">Configuration</a> for how to setup the storage laye
     </div>
     <div class="col-md m-2 text-body">
         <div><h4 id="disclaimer">Disclaimer</h4>
-
 <p>This project is in its very infancy.
 Features are missings and bugs are frequent. Feedback and contributions are much
 appreciated.</div>
